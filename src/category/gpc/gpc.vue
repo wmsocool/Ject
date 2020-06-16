@@ -3,19 +3,19 @@
 </template>
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     // "el-button": ELEMENT.Button,
   },
+  props: {},
   data() {
     return {}
   },
-  props: {},
+  computed: {},
+  watch: {},
   created() {},
   mounted() {},
   destroyed() {},
-  computed: {},
-  watch: {},
-  methods: {},
+  methods: {}
 }
 </script>

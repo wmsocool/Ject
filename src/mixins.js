@@ -1,30 +1,30 @@
 export const mixina = {
   data() {
     return {
-      objectValue: {},
+      objectValue: {}
     }
   },
   created() {
-    console.log("mixin")
+    console.log('mixin')
   },
   mounted() {},
   destroyed() {},
   computed: {},
   watch: {},
-  methods: {},
+  methods: {}
 }
 export const mixinb = {
   data() {
     return {
-      objectValue: {},
+      objectValue: {}
     }
   },
   created() {
-    console.log("mixin")
+    console.log('mixin')
   },
   mounted() {},
   destroyed() {},
   computed: {},
   watch: {},
-  methods: {},
+  methods: {}
 }

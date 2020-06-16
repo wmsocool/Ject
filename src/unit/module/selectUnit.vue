@@ -5,8 +5,7 @@
       :key="item.value"
       :label="item.label"
       :value="item.value"
-    >
-    </el-option>
+    />
   </el-select>
 </template>
 
@@ -14,21 +13,21 @@
 export default {
   props: {
     object: Object,
-    objectValue: Object,
+    objectValue: Object
   },
   data() {
     return {}
   },
+  computed: {},
+  watch: {},
   created() {
     if (!this.objectValue[this.object.id]) {
-      this.objectValue[this.object.id] = ""
+      this.objectValue[this.object.id] = ''
     }
   },
   mounted() {},
   destroyed() {},
-  computed: {},
-  watch: {},
-  methods: {},
+  methods: {}
 }
 </script>
 

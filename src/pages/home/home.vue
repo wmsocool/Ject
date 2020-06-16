@@ -2,35 +2,37 @@
   <el-row>
     <el-col :span="24">{{ objectValue }}</el-col>
     <el-col :span="24">
-      <LoadUnit :objects="objects" :objectValue="objectValue" :units="units" />
+      <LoadUnit :objects="objects" :object-value="objectValue" :units="units" />
     </el-col>
   </el-row>
 </template>
 <script>
-import { objects } from "./object";
-import { mixina } from "@/mixins";
-import LoadUnit from "@/unit/load-unit";
+import { objects } from './object'
+import { mixina } from '@/mixins'
+import LoadUnit from '@/unit/load-unit'
 export default {
-  mixins: [mixina],
   components: {
     LoadUnit
   },
-  // props: [objectValue, units],
-  props: {
-    objectValue: Object,
-    units: Object
-  },
+  mixins: [mixina],
   data() {
     return {
-      objects: objects
-    };
+      objects: objects,
+      objectValue: {},
+      units: {}
+    }
   },
-  created() {},
-  mounted() {},
-  destroyed() {},
   computed: {},
   watch: {},
+  created() {
+    // objects.map(item => {
+    //   this.units[item.id] = item;
+    //   this.$set(this.objectValue, item.id, item.defaultValue || null);
+    // });
+  },
+  mounted() {},
+  destroyed() {},
   methods: {}
-};
+}
 </script>
 <style></style>

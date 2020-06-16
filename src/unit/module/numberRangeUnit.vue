@@ -4,18 +4,20 @@
     controls-position="none"
     :min="1"
     :max="10"
-  ></el-input-number>
+  />
 </template>
 
 <script>
 export default {
   props: {
     object: Object,
-    objectValue: Object,
+    objectValue: Object
   },
   data() {
     return {}
   },
+  computed: {},
+  watch: {},
   created() {
     if (!this.objectValue[this.object.id]) {
       this.objectValue[this.object.id] = 0
@@ -23,9 +25,7 @@ export default {
   },
   mounted() {},
   destroyed() {},
-  computed: {},
-  watch: {},
-  methods: {},
+  methods: {}
 }
 </script>
 

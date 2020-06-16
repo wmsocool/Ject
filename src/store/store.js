@@ -1,7 +1,7 @@
 Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
-    edit: false,
+    edit: false
   },
   mutations: {
     openEdit(state) {
@@ -9,6 +9,6 @@ export default new Vuex.Store({
     },
     closeEdit(state) {
       state.edit = false
-    },
-  },
+    }
+  }
 })

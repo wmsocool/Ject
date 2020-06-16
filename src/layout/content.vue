@@ -12,27 +12,27 @@
   </el-container>
 </template>
 <script>
-import MyMenu from "@/menu/menu"
-import MyDemo from "@/pages/demo/demo"
+import MyMenu from '@/menu/menu'
+import MyDemo from '@/pages/demo/demo'
 export default {
-  props: {
-    object: Object,
-    objectValue: Object,
-  },
-  name: "Home",
+  name: 'Home',
   components: {
     MyDemo,
-    MyMenu,
+    MyMenu
   },
+  props: {
+    object: Object,
+    objectValue: Object
+  },
+  props: {},
   data() {
     return {}
   },
-  props: {},
+  computed: {},
+  watch: {},
   created() {},
   mounted() {},
   destroyed() {},
-  computed: {},
-  watch: {},
-  methods: {},
+  methods: {}
 }
 </script>
