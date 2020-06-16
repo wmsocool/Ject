@@ -8,4 +8,5 @@ export const units = {
   selectUnit: { file: "selectUnit" },
   numberRangeUnit: { file: "numberRangeUnit" },
   buttonUnit: { file: "buttonUnit" },
+  boxUnit: { file: "boxUnit" },
 }

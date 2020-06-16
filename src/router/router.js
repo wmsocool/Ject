@@ -6,6 +6,11 @@ const routes = [
     component: () => import("@/pages/home/home"),
   },
   {
+    path: "/unitInfo",
+    name: "unitInfo",
+    component: () => import("@/systemConfig/unitInfo"),
+  },
+  {
     path: "/plm",
     name: "plm",
     component: () => import("@/category/plm/plm"),

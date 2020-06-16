@@ -1,12 +1,88 @@
 export var objects = [
   {
-    id: "key001",
+    id: "key00x",
     span: 12,
+    label: "boxUnit",
+    required: false,
+    disabled: false,
+    defaultValue: "",
+    optionals: [],
+    children: [
+      {
+        id: "key00y",
+        span: 6,
+        label: "radioUnit",
+        optionals: [
+          { value: "1", label: "1天" },
+          { value: "3", label: "3天" },
+          { value: "7", label: "7天" },
+          { value: "15", label: "15天" },
+          { value: "30", label: "30天" },
+        ],
+        required: false,
+        disabled: false,
+        defaultValue: 1,
+        placeholder: "",
+        unitType: "radioUnit",
+        onChange: function(object, objectValue) {
+          //console.log(object, objectValue)
+        },
+      },
+      {
+        id: "key00z",
+        span: 24,
+        label: "selectUnit",
+        required: false,
+        disabled: false,
+        defaultValue: "",
+        optionals: [
+          { value: "sQ2Qj6", label: "全部" },
+          { value: "sQ2Ql6", label: "是" },
+          { value: "sQ2Qn6", label: "否" },
+        ],
+        placeholder: "请不要选我",
+        unitType: "tableUnit",
+        onChange: function(object, objectValue) {
+          //console.log(object, objectValue)
+        },
+      },
+    ],
+    placeholder: "Don't input me",
+    unitType: "boxUnit",
+    onChange: function(object, objectValue) {
+      //console.log(object, objectValue)
+    },
+  },
+  {
+    id: "key001",
+    span: 24,
     label: "textareaUnit",
     required: false,
     disabled: false,
     defaultValue: "",
     optionals: [],
+    children: [
+      {
+        id: "key00w",
+        span: 6,
+        label: "radioUnit",
+        optionals: [
+          { value: "1", label: "1天" },
+          { value: "3", label: "3天" },
+          { value: "7", label: "7天" },
+          { value: "15", label: "15天" },
+          { value: "30", label: "30天" },
+        ],
+        required: false,
+        disabled: false,
+        defaultValue: 1,
+        placeholder: "",
+        unitType: "radioUnit",
+        onChange: function(object, objectValue) {
+          //console.log(object, objectValue)
+        },
+      },
+    ],
     placeholder: "Don't input me",
     unitType: "textareaUnit",
     onChange: function(object, objectValue) {

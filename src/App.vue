@@ -10,25 +10,31 @@
     </el-header>
     <el-container>
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        <MyMenu />
+        <MyMenu :units="units" :objectValue="objectValue" />
       </el-aside>
       <el-main>
-        <router-view />
+        <router-view :units="units" :objectValue="objectValue" />
       </el-main>
     </el-container>
   </el-container>
 </template>
 <script>
-import MyMenu from "@/menu/menu"
+import MyMenu from "@/menu/menu";
 export default {
   name: "Home",
   components: {
-    MyMenu,
+    MyMenu
+  },
+  data() {
+    return {
+      objectValue: {},
+      units: {}
+    };
   },
   methods: {
     jumpTo(tar) {
-      this.$router.push("/" + tar)
-    },
-  },
-}
+      this.$router.push("/" + tar);
+    }
+  }
+};
 </script>
