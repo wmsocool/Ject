@@ -1,7 +1,7 @@
 export const mixina = {
   data() {
     return {
-      objectValue: {}
+
     }
   },
   created() {
@@ -16,7 +16,7 @@ export const mixina = {
 export const mixinb = {
   data() {
     return {
-      objectValue: {}
+
     }
   },
   created() {

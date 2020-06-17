@@ -14,8 +14,8 @@ Vue.component('TheUnit', TheUnit)
 new Vue({
   router,
   store,
-  render: (h) => h(App),
   data: {
     Bus: new Vue()
-  }
+  },
+  render: (h) => h(App)
 }).$mount('#app')

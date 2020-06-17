@@ -136,5 +136,11 @@ module.exports = {
       'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
       'object-curly-spacing': [2, 'always', { objectsInObjects: false }],
       'array-bracket-spacing': [2, 'never']
+  },
+  globals: {
+    Vue: "readonly",
+    Vuex: "readonly",
+    VueRouter: "readonly",
+    ELEMENT: "readonly",
   }
 }

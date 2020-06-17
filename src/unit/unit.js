@@ -7,7 +7,7 @@ export default {
   },
   render: function(createElement) {
     return createElement(
-      require('./module/' + units[this.object.unitType].file + '.vue').default,
+      require('./module/' + units[this.object.unitType].file).default,
       {
         props: {
           units: this.units,

@@ -8,8 +8,9 @@
 <script>
 export default {
   props: {
-    object: Object,
-    objectValue: Object
+    units: { type: Object, default: null },
+    object: { type: Object, default: null },
+    objectValue: { type: Object, default: null }
   },
   data() {
     return {

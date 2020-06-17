@@ -1,10 +1,8 @@
 export function isNotEmpty(data) {
   var isNotEmpty = false
-  if (typeof data === 'string' && data != '') {
+  if (typeof data === 'string' && data !== '') {
     isNotEmpty = true
-  } else if (typeof data === 'number' && data != '') {
-    isNotEmpty = true
-  } else if (typeof data === 'array' && data.length > 0) {
+  } else if (typeof data === 'number' && data !== '') {
     isNotEmpty = true
   } else if (typeof data === 'object') {
     var o = new RegExp(/^\{.*\}$/)
@@ -12,7 +10,7 @@ export function isNotEmpty(data) {
     if (JSON.stringify(data).match(a) && data.length > 0) {
       isNotEmpty = true
     }
-    if (JSON.stringify(data).match(o) && JSON.stringify(data) != '{}') {
+    if (JSON.stringify(data).match(o) && JSON.stringify(data) !== '{}') {
       isNotEmpty = true
     }
   }
@@ -21,13 +19,13 @@ export function isNotEmpty(data) {
 
 // 解析数据
 export function parseData(res) {
-  if (typeof res.data === 'string' && res.data.indexOf('<') == 0) {
+  if (typeof res.data === 'string' && res.data.indexOf('<') === 0) {
     document.write(res.data)
   }
-  if (!res || res.data == '[]') {
+  if (!res || res.data === '[]') {
     return false
   }
-  if (res.data.retCode == '000000') {
+  if (res.data.retCode === '000000') {
     var data = res.data.element || []
     if (typeof data === 'string') {
       try {
@@ -57,7 +55,7 @@ export function compareArrRemove(arr = [], arr2 = [], key) {
 
 // 数组去重
 export function uniqueArr(arr = [], key) {
-  if (key == null) {
+  if (key === null) {
     return arr
   }
   const tem = []
@@ -75,7 +73,7 @@ export function uniqueUser(arr) {
   const newArr = []
   const idArr = []
   arr.forEach((item) => {
-    if (idArr.indexOf(item.userId) == -1) {
+    if (idArr.indexOf(item.userId) === -1) {
       newArr.push(item)
       idArr.push(item.userId)
     }
