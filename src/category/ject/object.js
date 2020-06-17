@@ -1,12 +1,34 @@
 export var objects = [
   {
+    id: 'box',
+    span: 24,
+    children: [
+      {
+        id: 'list',
+        span: 2,
+        label: '列表',
+        placeholder: '',
+        unitType: 'buttonUnit',
+        onClick: function(object, objectValue) {
+          this.$router.push('/ject/list')
+        }
+      },
+      {
+        id: '内容',
+        span: 2,
+        label: 'submit',
+        placeholder: '',
+        unitType: 'buttonUnit',
+        onClick: function(object, objectValue) {
+          this.$router.push('/ject/content')
+        }
+      }
+    ],
+    unitType: 'boxUnit'
+  },
+  {
     id: 'key00x',
     span: 12,
-    label: 'boxUnit',
-    required: false,
-    disabled: false,
-    defaultValue: '',
-    optionals: [],
     children: [
       {
         id: 'key00y',
@@ -25,7 +47,7 @@ export var objects = [
         placeholder: '',
         unitType: 'radioUnit',
         onChange: function(object, objectValue) {
-          // console.log(object, objectValue)
+        // console.log(object, objectValue)
         }
       },
       {
@@ -43,15 +65,11 @@ export var objects = [
         placeholder: '请不要选我',
         unitType: 'tableUnit',
         onChange: function(object, objectValue) {
-          // console.log(object, objectValue)
+        // console.log(object, objectValue)
         }
       }
     ],
-    placeholder: "Don't input me",
-    unitType: 'boxUnit',
-    onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
-    }
+    unitType: 'boxUnit'
   },
   {
     id: 'key001',
@@ -79,14 +97,14 @@ export var objects = [
         placeholder: '',
         unitType: 'radioUnit',
         onChange: function(object, objectValue) {
-          // console.log(object, objectValue)
+        // console.log(object, objectValue)
         }
       }
     ],
     placeholder: "Don't input me",
     unitType: 'textareaUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -100,7 +118,7 @@ export var objects = [
     placeholder: '请选择',
     unitType: 'rangePickerUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -120,7 +138,7 @@ export var objects = [
     placeholder: '',
     unitType: 'radioUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -145,7 +163,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -170,7 +188,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -184,7 +202,7 @@ export var objects = [
     placeholder: "Don't input me",
     unitType: 'inputUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -198,7 +216,7 @@ export var objects = [
     placeholder: "Don't input me",
     unitType: 'inputUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -217,7 +235,7 @@ export var objects = [
     placeholder: '请不要选我',
     unitType: 'selectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -242,7 +260,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -261,7 +279,7 @@ export var objects = [
     placeholder: '请不要选我',
     unitType: 'selectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -275,7 +293,7 @@ export var objects = [
     placeholder: "Don't input me",
     unitType: 'numberRangeUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -289,7 +307,7 @@ export var objects = [
     placeholder: "Don't input me",
     unitType: 'numberRangeUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -303,7 +321,7 @@ export var objects = [
     placeholder: "Don't input me",
     unitType: 'numberRangeUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -320,7 +338,7 @@ export var objects = [
     placeholder: '请不要选我',
     unitType: 'selectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -352,7 +370,7 @@ export var objects = [
     placeholder: '请不要选我',
     unitType: 'selectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -377,7 +395,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -402,7 +420,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -427,7 +445,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -452,7 +470,7 @@ export var objects = [
     placeholder: '请输入关键字',
     unitType: 'remoteSelectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -470,7 +488,7 @@ export var objects = [
     placeholder: "Don't input me",
     unitType: 'radioUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -488,7 +506,7 @@ export var objects = [
     placeholder: '请不要选我',
     unitType: 'selectUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {
@@ -506,7 +524,7 @@ export var objects = [
     placeholder: '请不要选我',
     unitType: 'tableUnit',
     onChange: function(object, objectValue) {
-      // console.log(object, objectValue)
+    // console.log(object, objectValue)
     }
   },
   {

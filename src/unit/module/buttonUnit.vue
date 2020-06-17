@@ -29,7 +29,7 @@ export default {
   destroyed() {},
   methods: {
     onclickFn() {
-      console.log(this.objectValue)
+      this.object.onClick.call(this, this.object, this.objectValue)
     }
   }
 }

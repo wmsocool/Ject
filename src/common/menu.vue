@@ -60,12 +60,8 @@
 </template>
 
 <script>
-import { objects } from '@/pages/home/object'
+import { objects } from '@/category/ject/object'
 export default {
-  props: {
-    object: Object,
-    objectValue: Object
-  },
   props: {},
   data() {
     return {

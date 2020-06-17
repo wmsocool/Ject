@@ -4,11 +4,11 @@
       <Header />
     </el-header>
     <el-container>
-      <el-aside width="300px" style="background-color: #ddd">
+      <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
         <MyMenu />
       </el-aside>
       <el-main>
-        PMS
+        <router-view />
       </el-main>
     </el-container>
   </el-container>

@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import { objects } from '@/pages/home/object'
+import { objects } from '@/category/ject/object'
 export default {
   props: {
-    objectValue: Object,
-    units: Object
+    units: { type: Object, default: null },
+    objectValue: { type: Object, default: null }
   },
   data() {
     return {

@@ -1,5 +1,5 @@
 <template>
-  <div>plm</div>
+  <div>列表</div>
 </template>
 <script>
 export default {

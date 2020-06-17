@@ -144,3 +144,26 @@ module.exports = {
     ELEMENT: "readonly",
   }
 }
+
+//eslint 扩展设置
+// {
+//     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+//     "eslint.validate": [
+//         "javascript",
+//         "javascriptreact",
+//         {
+//             "language": "vue",
+//             "autoFix": true
+//         },
+//         "vue"
+//     ],
+// "eslint.autoFixOnSave": true,
+// "eslint.alwaysShowStatus": true,
+// "window.zoomLevel": 0,
+// "editor.codeActionsOnSave": {
+//     "source.fixAll.eslint": true
+// },
+// "eslint.codeAction.disableRuleComment": {
+
+// }
+// }

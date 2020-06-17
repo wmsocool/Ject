@@ -25,10 +25,6 @@ export default {
   computed: {},
   watch: {},
   created() {
-    // objects.map(item => {
-    //   this.units[item.id] = item;
-    //   this.$set(this.objectValue, item.id, item.defaultValue || null);
-    // });
   },
   mounted() {},
   destroyed() {},

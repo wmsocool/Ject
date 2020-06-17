@@ -13,16 +13,12 @@
 </template>
 
 <script>
-import LoadUnit from '@/unit/load-unit'
 export default {
   name: 'LoadUnit',
-  components: {
-    LoadUnit
-  },
   props: {
-    objects: Array,
-    objectValue: Object,
-    units: Object
+    units: { type: Object, default: null },
+    objects: { type: Array, default: null },
+    objectValue: { type: Object, default: null }
   },
   created() {
     this.objects.map(item => {

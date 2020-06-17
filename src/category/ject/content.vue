@@ -1,16 +1,11 @@
 <template>
-  <el-table :data="tableData">
-    <el-table-column prop="date" label="日期" width="140" />
-    <el-table-column prop="name" label="姓名" width="120" />
-    <el-table-column prop="address" label="地址" />
-  </el-table>
+  <div>内容</div>
 </template>
-
 <script>
 export default {
-  props: {
-    object: Object,
-    objectValue: Object
+  name: 'Home',
+  components: {
+    // "el-button": ELEMENT.Button,
   },
   props: {},
   data() {
@@ -30,5 +25,3 @@ export default {
   methods: {}
 }
 </script>
-
-<style></style>
