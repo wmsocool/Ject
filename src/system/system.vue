@@ -8,27 +8,36 @@
         <MyMenu />
       </el-aside>
       <el-main>
-        <router-view :object-value="objectValue" :units="units" />
+        <LoadUnit :objects="objects" :object-value="objectValue" :units="units" />
       </el-main>
     </el-container>
   </el-container>
 </template>
 <script>
+import { objects } from './objects'
+import { mixina } from '@/mixins'
 import Header from '@/common/header'
 import MyMenu from '@/common/menu'
 export default {
-  name: 'Home',
   components: {
-    MyMenu,
-    Header
+    Header,
+    MyMenu
   },
+  mixins: [mixina],
   data() {
     return {
-      units: {},
-      objectValue: {}
+      objects: objects,
+      objectValue: {},
+      units: {}
     }
   },
-  methods: {
-  }
+  computed: {},
+  watch: {},
+  created() {
+  },
+  mounted() {},
+  destroyed() {},
+  methods: {}
 }
 </script>
+<style></style>

@@ -2,7 +2,7 @@
   <el-row>
     <template v-for="(object, index) in objects">
       <el-col :key="index" :span="object.span">
-        <TheUnit :object="object" :object-value="objectValue">
+        <TheUnit :object="object" :object-value="objectValue" :units="units">
           <template v-if="object.children">
             <LoadUnit :objects="object.children" :object-value="objectValue" :units="units" />
           </template>

@@ -538,3 +538,54 @@ export var objects = [
     }
   }
 ]
+
+export var listObjects = [
+  {
+    id: 'key00y',
+    span: 6,
+    label: 'radioUnit',
+    optionals: [
+      { value: '1', label: '1天' },
+      { value: '3', label: '3天' },
+      { value: '7', label: '7天' },
+      { value: '15', label: '15天' },
+      { value: '30', label: '30天' }
+    ],
+    required: false,
+    disabled: false,
+    defaultValue: 1,
+    placeholder: '',
+    unitType: 'selectUnit',
+    onChange: function(object, objectValue) {
+      // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'searchButton',
+    span: 2,
+    label: '搜索',
+    placeholder: '',
+    unitType: 'buttonUnit',
+    onClick: function(object, objectValue) {
+      alert('搜索')
+    }
+  },
+  {
+    id: 'tableUnit003',
+    span: 24,
+    label: 'selectUnit',
+    required: false,
+    disabled: false,
+    defaultValue: '',
+    optionals: [
+      { value: 'sQ2Qj6', label: '全部' },
+      { value: 'sQ2Ql6', label: '是' },
+      { value: 'sQ2Qn6', label: '否' }
+    ],
+    placeholder: '请不要选我',
+    unitType: 'tableUnit',
+    onChange: function(object, objectValue) {
+      // console.log(object, objectValue)
+    }
+  }
+]

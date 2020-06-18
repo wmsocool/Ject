@@ -1,15 +1,19 @@
 <template>
-  <div>列表</div>
+  <LoadUnit :objects="listObjects" :object-value="objectValue" :units="units" />
 </template>
 <script>
+import { listObjects } from './object'
+import { mixina } from '@/mixins'
 export default {
   name: 'Home',
-  components: {
-    // "el-button": ELEMENT.Button,
+  mixins: [mixina],
+  props: {
+    units: { type: Object, default: null },
+    objectValue: { type: Object, default: null }
   },
-  props: {},
   data() {
     return {
+      listObjects: listObjects,
       tableData: Array(20).fill({
         date: '2016-05-02',
         name: '王小虎',

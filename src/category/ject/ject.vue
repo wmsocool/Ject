@@ -9,17 +9,15 @@
 <script>
 import { objects } from './object'
 import { mixina } from '@/mixins'
-import LoadUnit from '@/unit/load-unit'
 export default {
-  components: {
-    LoadUnit
-  },
   mixins: [mixina],
+  props: {
+    units: { type: Object, default: null },
+    objectValue: { type: Object, default: null }
+  },
   data() {
     return {
-      objects: objects,
-      objectValue: {},
-      units: {}
+      objects: objects
     }
   },
   computed: {},

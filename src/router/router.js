@@ -1,6 +1,11 @@
 Vue.use(VueRouter)
 const routes = [
   {
+    path: '/system',
+    name: 'system',
+    component: () => import('@/system/system')
+  },
+  {
     path: '/',
     name: 'ject',
     component: () => import('@/category/ject/index'),
@@ -23,19 +28,14 @@ const routes = [
     ]
   },
   {
-    path: '/unitInfo',
-    name: 'unitInfo',
-    component: () => import('@/system/unitInfo')
-  },
-  {
     path: '/pms',
     name: 'pms',
-    component: () => import('@/category/pms/pms')
+    component: () => import('@/category/pms')
   },
   {
     path: '/gpc',
     name: 'gpc',
-    component: () => import('@/category/gpc/gpc')
+    component: () => import('@/category/gpc')
   },
   {
     path: '*',
