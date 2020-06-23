@@ -1,8 +1,11 @@
-export var objects = [
-  {
+export var objects = [{
+  id: 'box',
+  span: 24,
+  labelWidth: '124px',
+  children: [{
     id: 'id',
     span: 24,
-    label: 'id',
+    label: '',
     required: false,
     disabled: false,
     defaultValue: '',
@@ -187,6 +190,9 @@ export var objects = [
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
-  }
+  }],
+  unitType: 'boxUnit'
+  // unitType: 'formUnit'
+}
 ]
 

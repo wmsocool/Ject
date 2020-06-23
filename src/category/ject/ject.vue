@@ -8,6 +8,7 @@
 </template>
 <script>
 import { objects } from './object'
+import { mapState } from 'vuex'
 import { mixina } from '@/mixins'
 export default {
   mixins: [mixina],
@@ -20,7 +21,9 @@ export default {
       objects: objects
     }
   },
-  computed: {},
+  computed: {
+    ...mapState(['info'])
+  },
   watch: {},
   created() {
   },

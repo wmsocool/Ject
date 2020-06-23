@@ -9,6 +9,16 @@ export default new Vuex.Store({
     },
     closeEdit(state) {
       state.edit = false
+    },
+    setInfo(state, data) {
+      state.info = data
     }
+  },
+  actions: {
+    // setInfoData({ commit }) {
+    //   return getComputedStyle().then((res) => {
+    //     commit('setInfo', res.data)
+    //   })
+    // }
   }
 })

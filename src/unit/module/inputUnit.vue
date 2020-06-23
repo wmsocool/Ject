@@ -1,8 +1,10 @@
 <template>
+  <!-- <el-form-item :label="object.label"> -->
   <el-input
     v-model="objectValue[object.id]"
-    placeholder="请输入内容"
+    :placeholder="object.placeholder"
   />
+  <!-- </el-form-item> -->
 </template>
 
 <script>

@@ -19,5 +19,5 @@ new Vue({
   data: {
     Bus: new Vue()
   },
-  render: (h) => h(App)
+  render: (createElement) => createElement(App)
 }).$mount('#app')

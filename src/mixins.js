@@ -9,7 +9,9 @@ export const mixina = {
   },
   mounted() {},
   destroyed() {},
-  computed: {},
+  computed: {
+
+  },
   watch: {},
   methods: {}
 }
