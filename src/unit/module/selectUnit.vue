@@ -1,12 +1,20 @@
 <template>
-  <el-select v-model="objectValue[object.id]" placeholder="请选择">
-    <el-option
-      v-for="item in object.optionals"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
-    />
-  </el-select>
+  <span>
+    <el-select
+      v-model="objectValue[object.id]"
+      placeholder="请选择"
+      :disabled="object.disabled"
+      @change="onChange"
+    >
+      <el-option
+        v-for="item in object.optionals"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+      />
+    </el-select>
+    <slot />
+  </span>
 </template>
 
 <script>
@@ -28,7 +36,11 @@ export default {
   },
   mounted() {},
   destroyed() {},
-  methods: {}
+  methods: {
+    onChange(val) {
+      this.object.onChange.call(this, this.object, this.objectValue)
+    }
+  }
 }
 </script>
 

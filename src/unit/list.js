@@ -6,8 +6,8 @@ export const units = {
   radioUnit: { file: 'radioUnit' },
   remoteSelectUnit: { file: 'remoteSelectUnit' },
   selectUnit: { file: 'selectUnit' },
-  numberRangeUnit: { file: 'numberRangeUnit' },
+  numberUnit: { file: 'numberUnit' },
   buttonUnit: { file: 'buttonUnit' },
   boxUnit: { file: 'boxUnit' },
-  formUnit: { file: 'formUnit' }
+  checkboxUnit: { file: 'checkboxUnit' }
 }

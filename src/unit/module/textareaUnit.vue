@@ -1,13 +1,17 @@
 <template>
-  <el-input
-    v-model="objectValue[object.id]"
-    type="textarea"
-    :rows="2"
-    placeholder="请输入内容"
-  />
-  <!-- @input="onInput" -->
+  <span>
+    <el-input
+      v-model="objectValue[object.id]"
+      type="textarea"
+      :rows="3"
+      :placeholder="object.placeholder"
+      :disabled="object.disabled"
+      @change="onChange"
+      @input="onChange"
+    />
+    <slot />
+  </span>
 </template>
-
 <script>
 export default {
   props: {
@@ -28,10 +32,9 @@ export default {
   mounted() {},
   destroyed() {},
   methods: {
-    // onInput(value) {
-    //   debugger
-    //   this.objectValue[this.object.id] = value
-    // },
+    onChange(val) {
+      this.object.onChange.call(this, this.object, this.objectValue)
+    }
   }
 }
 </script>

@@ -1,11 +1,12 @@
 export var objects = [{
   id: 'box',
   span: 24,
-  labelWidth: '124px',
+  labelWidth: '100px',
+  isForm: true,
   children: [{
     id: 'id',
     span: 24,
-    label: '',
+    label: 'id',
     required: false,
     disabled: false,
     defaultValue: '',
@@ -20,6 +21,34 @@ export var objects = [{
     id: 'span',
     span: 24,
     label: 'span',
+    required: false,
+    disabled: false,
+    defaultValue: '',
+    optionals: [],
+    placeholder: '请选择',
+    unitType: 'inputUnit',
+    onChange: function(object, objectValue) {
+    // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'isForm',
+    span: 24,
+    label: 'isForm',
+    required: false,
+    disabled: false,
+    defaultValue: '',
+    optionals: [],
+    placeholder: '请选择',
+    unitType: 'radioUnit',
+    onChange: function(object, objectValue) {
+    // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'labelWidth',
+    span: 24,
+    label: 'labelWidth',
     required: false,
     disabled: false,
     defaultValue: '',
@@ -192,7 +221,6 @@ export var objects = [{
     }
   }],
   unitType: 'boxUnit'
-  // unitType: 'formUnit'
 }
 ]
 

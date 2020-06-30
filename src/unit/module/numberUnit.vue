@@ -1,10 +1,15 @@
 <template>
-  <el-input-number
-    v-model="objectValue[object.id]"
-    controls-position="none"
-    :min="1"
-    :max="10"
-  />
+  <span>
+    <el-input-number
+      v-model="objectValue[object.id]"
+      controls-position="none"
+      :min="1"
+      :max="10"
+      :disabled="object.disabled"
+      @change="onChange"
+    />
+    <slot />
+  </span>
 </template>
 
 <script>
@@ -26,7 +31,11 @@ export default {
   },
   mounted() {},
   destroyed() {},
-  methods: {}
+  methods: {
+    onChange(val) {
+      this.object.onChange.call(this, this.object, this.objectValue)
+    }
+  }
 }
 </script>
 

@@ -1,5 +1,8 @@
 <template>
-  <el-button type="success" @click="onclickFn">成功按钮</el-button>
+  <span>
+    <el-button type="success" @click="onclickFn">成功按钮</el-button>
+    <slot />
+  </span>
 </template>
 
 <script>

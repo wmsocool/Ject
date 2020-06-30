@@ -1,10 +1,13 @@
 <template>
-  <!-- <el-form-item :label="object.label"> -->
-  <el-input
-    v-model="objectValue[object.id]"
-    :placeholder="object.placeholder"
-  />
-  <!-- </el-form-item> -->
+  <span>
+    <el-input
+      v-model="objectValue[object.id]"
+      :placeholder="object.placeholder"
+      :disabled="object.disabled"
+      @change="onChange"
+    />
+    <slot />
+  </span>
 </template>
 
 <script>
@@ -27,12 +30,17 @@ export default {
   watch: {},
   created() {
     if (!this.objectValue[this.object.id]) {
-      this.objectValue[this.object.id] = ''
+      this.objectValue[this.object.id] = this.object.defaultValue || ''
     }
   },
-  mounted() {},
+  mounted() {
+  },
   destroyed() {},
-  methods: {}
+  methods: {
+    onChange(val) {
+      this.object.onChange.call(this, this.object, this.objectValue)
+    }
+  }
 }
 </script>
 

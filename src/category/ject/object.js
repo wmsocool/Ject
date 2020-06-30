@@ -73,7 +73,7 @@ export var objects = [
   },
   {
     id: 'key001',
-    span: 24,
+    span: 12,
     label: 'textareaUnit',
     required: false,
     disabled: false,
@@ -136,7 +136,7 @@ export var objects = [
     disabled: false,
     defaultValue: 1,
     placeholder: '',
-    unitType: 'radioUnit',
+    unitType: 'checkboxUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }

@@ -1,16 +1,15 @@
 <template>
-  <span>
-    <el-date-picker
-      v-model="objectValue[object.id]"
-      type="daterange"
-      range-separator="至"
-      start-placeholder="开始日期"
-      end-placeholder="结束日期"
-      :disabled="object.disabled"
-      @change="onChange"
-    />
-    <slot />
-  </span>
+  <el-checkbox-group
+    v-model="objectValue[object.id]"
+    :disabled="object.disabled"
+    @change="onChange"
+  >
+    <el-checkbox label="复选框 A" />
+    <el-checkbox label="复选框 B" />
+    <el-checkbox label="复选框 C" />
+    <el-checkbox label="禁用" />
+    <el-checkbox label="选中且禁用" />
+  </el-checkbox-group>
 </template>
 
 <script>
@@ -21,16 +20,15 @@ export default {
     objectValue: { type: Object, default: null }
   },
   data() {
-    return {}
+    return {
+    }
   },
   computed: {},
   watch: {},
   created() {
-    if (!this.objectValue[this.object.id]) {
-      this.objectValue[this.object.id] = ''
-    }
   },
   mounted() {},
+  destroyed() {},
   methods: {
     onChange(val) {
       this.object.onChange.call(this, this.object, this.objectValue)
