@@ -26,7 +26,7 @@ export default {
   created() {
     this.objects.map(item => {
       this.$set(this.units, item.id, item)
-      this.$set(this.objectValue, item.id, item.defaultValue || null)
+      this.$set(this.objectValue, item.id, (this.objectValue[item.id] || item.defaultValue || null))
     })
   }
 }

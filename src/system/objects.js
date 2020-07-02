@@ -152,7 +152,7 @@ export var objects = [{
     defaultValue: '',
     optionals: [],
     placeholder: "Don't input me",
-    unitType: 'inputUnit',
+    unitType: 'textareaUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
@@ -171,7 +171,7 @@ export var objects = [{
       { value: 'sQ2Q1o2', label: '多笔付' }
     ],
     placeholder: '请不要选我',
-    unitType: 'selectUnit',
+    unitType: 'inputUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
@@ -196,7 +196,7 @@ export var objects = [{
       ]
     },
     placeholder: '请输入关键字',
-    unitType: 'inputUnit',
+    unitType: 'selectUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }

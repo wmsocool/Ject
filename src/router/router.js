@@ -3,7 +3,14 @@ const routes = [
   {
     path: '/system',
     name: 'system',
-    component: () => import('@/system/system')
+    component: () => import('@/system/system'),
+    children: [
+      {
+        path: '/system/:id',
+        name: 'system',
+        component: () => import('@/category/ject/ject')
+      }
+    ]
   },
   {
     path: '/',

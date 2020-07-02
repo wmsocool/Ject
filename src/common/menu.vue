@@ -81,7 +81,7 @@ export default {
   methods: {
     handleNodeClick(node) {
       this.$root.Bus.theUnit = node
-      this.$router.push({ name: 'unitInfo', query: { id: node.id }})
+      this.$router.push({ name: 'system', params: { id: node.id }})
     }
   }
 }
