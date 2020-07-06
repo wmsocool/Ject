@@ -1,6 +1,10 @@
 <template>
-  <span>
-    <el-select v-model="objectValue[object.id]" multiple placeholder="请选择">
+  <div class="width100p">
+    <el-select
+      v-model="objectValue[object.id]"
+      multiple
+      placeholder="请选择"
+    >
       <el-option
         v-for="item in object.optionals"
         :key="item.value"
@@ -9,7 +13,7 @@
       />
     </el-select>
     <slot />
-  </span>
+  </div>
 </template>
 
 <script>

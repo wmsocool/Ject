@@ -1,7 +1,8 @@
 <template>
-  <span>
+  <div class="width100p">
     <el-select
       v-model="objectValue[object.id]"
+      style="width:100%"
       placeholder="请选择"
       :disabled="object.disabled"
       @change="onChange"
@@ -14,7 +15,7 @@
       />
     </el-select>
     <slot />
-  </span>
+  </div>
 </template>
 
 <script>

@@ -38,7 +38,10 @@ export var objects = [{
     required: false,
     disabled: false,
     defaultValue: '',
-    optionals: [],
+    optionals: [
+      { value: true, label: '是' },
+      { value: false, label: '否' }
+    ],
     placeholder: '请选择',
     unitType: 'radioUnit',
     onChange: function(object, objectValue) {
@@ -64,11 +67,6 @@ export var objects = [{
     span: 24,
     label: 'label',
     optionals: [
-      { value: '1', label: '1天' },
-      { value: '3', label: '3天' },
-      { value: '7', label: '7天' },
-      { value: '15', label: '15天' },
-      { value: '30', label: '30天' }
     ],
     required: false,
     disabled: false,

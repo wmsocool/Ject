@@ -17,7 +17,7 @@
 import { objects } from './objects'
 import { mixina } from '@/mixins'
 import Header from '@/common/header'
-import { objects as jectObject } from '@/category/ject/object.js'
+// import { objects as jectObject } from '@/category/ject/object.js'
 import MyMenu from '@/common/menu'
 export default {
   components: {
@@ -27,8 +27,8 @@ export default {
   mixins: [mixina],
   data() {
     return {
-      jectObject: jectObject,
-      id: this.$route.params.id,
+      // jectObject: jectObject,
+      id: '',
       objects: objects,
       objectValue: {},
       units: {}
@@ -37,10 +37,12 @@ export default {
   computed: {},
   watch: {
     '$route.params.id'(id) {
+      console.log(id)
       this.getObjectValue(id)
     }
   },
   created() {
+    this.id = this.$route.params.id
     this.id && this.getObjectValue(this.id)
   },
   mounted() {},
@@ -58,6 +60,7 @@ export default {
       //   }
       //   return false
       // }
+      this.objectValue = {}
       var node = this.$root.Bus.theUnit
       for (const key in node) {
         var value = node[key]

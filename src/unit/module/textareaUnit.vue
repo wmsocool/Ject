@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <div class="width100p">
     <el-input
       v-model="objectValue[object.id]"
       type="textarea"
@@ -10,7 +10,7 @@
       @input="onChange"
     />
     <slot />
-  </span>
+  </div>
 </template>
 <script>
 export default {

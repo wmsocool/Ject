@@ -1,8 +1,9 @@
 <template>
-  <span>
-    <el-radio v-model="objectValue[object.id]" label="1">备选项</el-radio>
-    <el-radio v-model="objectValue[object.id]" label="2">备选项</el-radio>
-  </span>
+  <div class="width100p">
+    <template v-for="(item, index) in object.optionals">
+      <el-radio :key="index" v-model="objectValue[object.id]" :label="item.value">{{ item.label }}</el-radio>
+    </template>
+  </div>
 </template>
 
 <script>

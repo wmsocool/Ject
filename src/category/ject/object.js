@@ -6,7 +6,7 @@ export var objects = [
       {
         id: 'list',
         span: 2,
-        label: '列表',
+        label: 'list',
         placeholder: '',
         unitType: 'buttonUnit',
         onClick: function(object, objectValue) {
@@ -14,7 +14,7 @@ export var objects = [
         }
       },
       {
-        id: '内容',
+        id: 'submit',
         span: 2,
         label: 'submit',
         placeholder: '',
@@ -32,7 +32,7 @@ export var objects = [
     children: [
       {
         id: 'key00y',
-        span: 6,
+        span: 24,
         label: 'radioUnit',
         optionals: [
           { value: '1', label: '1天' },
@@ -82,7 +82,7 @@ export var objects = [
     children: [
       {
         id: 'key00w',
-        span: 6,
+        span: 24,
         label: 'radioUnit',
         optionals: [
           { value: '1', label: '1天' },
@@ -123,7 +123,7 @@ export var objects = [
   },
   {
     id: 'key004',
-    span: 6,
+    span: 24,
     label: 'radioUnit',
     optionals: [
       { value: '1', label: '1天' },
@@ -285,13 +285,13 @@ export var objects = [
   {
     id: 'key00c',
     span: 6,
-    label: 'numberRangeUnit',
+    label: 'numberUnit',
     required: false,
     disabled: false,
     defaultValue: '',
     optionals: [],
     placeholder: "Don't input me",
-    unitType: 'numberRangeUnit',
+    unitType: 'numberUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
@@ -305,7 +305,7 @@ export var objects = [
     defaultValue: '',
     optionals: [],
     placeholder: "Don't input me",
-    unitType: 'numberRangeUnit',
+    unitType: 'numberUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
@@ -319,7 +319,7 @@ export var objects = [
     defaultValue: '',
     optionals: [],
     placeholder: "Don't input me",
-    unitType: 'numberRangeUnit',
+    unitType: 'numberUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
@@ -468,7 +468,7 @@ export var objects = [
       ]
     },
     placeholder: '请输入关键字',
-    unitType: 'remoteSelectUnit',
+    unitType: 'selectUnit',
     onChange: function(object, objectValue) {
     // console.log(object, objectValue)
     }
@@ -530,7 +530,7 @@ export var objects = [
   {
     id: 'key00o',
     span: 24,
-    label: 'submit',
+    label: '提交',
     placeholder: '',
     unitType: 'buttonUnit',
     onClick: function(object, objectValue) {

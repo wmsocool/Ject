@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <div class="width100p">
     <el-input-number
       v-model="objectValue[object.id]"
       controls-position="none"
@@ -9,7 +9,7 @@
       @change="onChange"
     />
     <slot />
-  </span>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <span>
-    <el-button type="success" @click="onclickFn">成功按钮</el-button>
+    <el-button type="success" @click="onclickFn">{{ object.label }}</el-button>
     <slot />
   </span>
 </template>

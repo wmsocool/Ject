@@ -1,14 +1,8 @@
 <template>
   <el-checkbox-group
     v-model="objectValue[object.id]"
-    :disabled="object.disabled"
-    @change="onChange"
   >
-    <el-checkbox label="复选框 A" />
-    <el-checkbox label="复选框 B" />
-    <el-checkbox label="复选框 C" />
-    <el-checkbox label="禁用" />
-    <el-checkbox label="选中且禁用" />
+    <el-checkbox v-for="(item, index) in object.optionals" :key="index" :label="item.label" />
   </el-checkbox-group>
 </template>
 
