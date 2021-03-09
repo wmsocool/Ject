@@ -4,8 +4,8 @@ import './assets/css/index.less'
 import App from './App.vue'
 import router from './router/router'
 import store from './store/store'
-import TheUnit from './unit/unit'
-import LoadUnit from '@/unit/load-unit'
+import TheUnit from './unit/unit.js'
+import LoadUnit from '@/unit/load-unit.vue'
 import { parseData } from '@/global.js'
 Vue.prototype.parseData = parseData
 Vue.config.productionTip = false

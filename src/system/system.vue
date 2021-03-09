@@ -16,9 +16,9 @@
 <script>
 import { objects } from './objects'
 import { mixina } from '@/mixins'
-import Header from '@/common/header'
+import Header from '@/common/header.vue'
 // import { objects as jectObject } from '@/category/ject/object.js'
-import MyMenu from '@/common/menu'
+import MyMenu from '@/common/menu.vue'
 export default {
   components: {
     Header,
@@ -37,7 +37,7 @@ export default {
   computed: {},
   watch: {
     '$route.params.id'(id) {
-      console.log(id)
+      // console.log(id)
       this.getObjectValue(id)
     }
   },

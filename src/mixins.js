@@ -5,7 +5,7 @@ export const mixina = {
     }
   },
   created() {
-    console.log('mixin')
+    // console.log('mixin')
   },
   mounted() {},
   destroyed() {},
@@ -22,7 +22,7 @@ export const mixinb = {
     }
   },
   created() {
-    console.log('mixin')
+    // console.log('mixin')
   },
   mounted() {},
   destroyed() {},

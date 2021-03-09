@@ -1,7 +1,7 @@
 const path = require('path')
 const resolve = (dir) => path.join(__dirname, dir)
 const IS_PROD = ['production', 'prod'].includes(process.env.NODE_ENV)
-console.log(process.env.NODE_ENV, IS_PROD)
+// console.log(process.env.NODE_ENV, IS_PROD)
 module.exports = {
   productionSourceMap: !IS_PROD, // 生产环境的 source map
   publicPath: './', // 默认'/'，部署应用包时的基本 URL
@@ -59,5 +59,38 @@ module.exports = {
     // config.plugins.delete("prefetch")
     // config.resolve.symlinks(true)// 修复HMR,热刷新功能
     config.resolve.alias.set('@', resolve('src')) // 添加别名
+  },
+  configureWebpack: (config) => {
+    if (process.env.NODE_ENV === 'production') {
+      // 为生产环境修改配置...
+      config.mode = 'production'
+      // 将每个依赖包打包成单独的js文件
+      const optimization = {
+        runtimeChunk: 'single',
+        splitChunks: {
+          chunks: 'all',
+          maxInitialRequests: Infinity,
+          minSize: 20000, // 依赖包超过20000bit将被单独打包
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name(module) {
+                // get the name. E.g. node_modules/packageName/not/this/part.js
+                // or node_modules/packageName
+                const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1]
+                // npm package names are URL-safe, but some servers don't like @ symbols
+                return `npm.${packageName.replace('@', '')}`
+              }
+            }
+          }
+        }
+      }
+      Object.assign(config, {
+        optimization
+      })
+    } else {
+      // 为开发环境修改配置...
+      config.mode = 'development'
+    }
   }
 }

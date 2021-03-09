@@ -11,7 +11,7 @@
   </el-container>
 </template>
 <script>
-import Header from '@/common/header'
+import Header from '@/common/header.vue'
 export default {
   name: 'Home',
   components: {

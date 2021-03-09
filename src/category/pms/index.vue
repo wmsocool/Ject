@@ -14,8 +14,8 @@
   </el-container>
 </template>
 <script>
-import Header from '@/common/header'
-import MyMenu from '@/common/menu'
+import Header from '@/common/header.vue'
+import MyMenu from '@/common/menu.vue'
 export default {
   name: 'Home',
   components: {
