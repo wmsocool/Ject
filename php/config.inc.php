@@ -47,4 +47,5 @@ header("Cache-Control: no-cache, must-revalidate");
          }
         return $reString;
     }
+    ob_clean();
 ?>
