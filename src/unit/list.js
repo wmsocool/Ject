@@ -9,5 +9,8 @@ export const units = {
   numberUnit: { file: 'numberUnit' },
   buttonUnit: { file: 'buttonUnit' },
   boxUnit: { file: 'boxUnit' },
+  headerUnit: { file: 'headerUnit' },
+  leftUnit: { file: 'leftUnit' },
+  rightUnit: { file: 'rightUnit' },
   checkboxUnit: { file: 'checkboxUnit' }
 }

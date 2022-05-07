@@ -1,6 +1,11 @@
 Vue.use(VueRouter)
 const routes = [
   {
+    path: '/',
+    name: 'neves',
+    component: () => import('@/neves/neves.vue')
+  },
+  {
     path: '/system',
     name: 'system',
     component: () => import('@/system/system.vue'),
@@ -13,12 +18,12 @@ const routes = [
     ]
   },
   {
-    path: '/',
+    path: '/ject',
     name: 'ject',
     component: () => import('@/category/ject/index.vue'),
     children: [
       {
-        path: '/ject',
+        path: '/ject/:id',
         name: 'jectlist',
         component: () => import('@/category/ject/ject.vue')
       },
@@ -55,7 +60,7 @@ router.onReady((opt) => {
   console.log(opt)
 })
 
-router.beforeEach(async(to, from, next) => {
+router.beforeEach(async (to, from, next) => {
   console.log(to, from, next)
   next()
 })
