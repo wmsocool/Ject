@@ -1,19 +1,23 @@
 <template>
-  <LoadUnit :objects="objects" :object-value="objectValue" :units="units" />
+  <LoadUnit :objects="neves" :object-value="objectValue" :units="units" />
 </template>
 <script>
-import { objects } from './neves'
+import { neves } from './neves'
+import { objects } from '@/category/ject/object'
 export default {
   name: 'Home',
   data() {
     return {
-      objects: objects,
+      neves: neves,
       units: {},
-      objectValue: {}
+      objectValue: {
+        objects: objects
+      }
     }
   },
+  created() {
+  },
   mounted() {
-    this.$root.Bus.objects = objects
   },
   methods: {
   }

@@ -1,3 +1,19 @@
+
+import { units } from './list'
+var selopt = []
+for (var key in units) {
+  selopt.push({
+    value: key,
+    label: key
+  })
+}
+var spanopt = []
+for (var i = 0; i < 24; i++) {
+  spanopt.push({
+    value: i + 1,
+    label: i + 1
+  })
+}
 export var objects = [{
   id: 'box',
   span: 24,
@@ -13,8 +29,22 @@ export var objects = [{
     optionals: [],
     placeholder: "Don't input me",
     unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'unitType',
+    span: 24,
+    label: 'unitType',
+    required: false,
+    disabled: false,
+    defaultValue: 'inputUnit',
+    placeholder: '请输入关键字',
+    unitType: 'selectUnit',
+    optionals: selopt,
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
     }
   },
   {
@@ -24,11 +54,45 @@ export var objects = [{
     required: false,
     disabled: false,
     defaultValue: '',
-    optionals: [],
     placeholder: '请选择',
-    unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    unitType: 'selectUnit',
+    optionals: spanopt,
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'required',
+    span: 24,
+    label: 'required',
+    required: false,
+    disabled: false,
+    defaultValue: true,
+    optionals: [
+      { value: true, label: '是' },
+      { value: false, label: '否' }
+    ],
+    placeholder: '请选择',
+    unitType: 'radioUnit',
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'disabled',
+    span: 24,
+    label: 'disabled',
+    required: false,
+    disabled: false,
+    defaultValue: false,
+    optionals: [
+      { value: true, label: '是' },
+      { value: false, label: '否' }
+    ],
+    placeholder: '请选择',
+    unitType: 'radioUnit',
+    onChange: function (object, objectValue) {
+      console.log(object, objectValue)
     }
   },
   {
@@ -37,15 +101,15 @@ export var objects = [{
     label: 'isForm',
     required: false,
     disabled: false,
-    defaultValue: '',
+    defaultValue: true,
     optionals: [
       { value: true, label: '是' },
       { value: false, label: '否' }
     ],
     placeholder: '请选择',
     unitType: 'radioUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
     }
   },
   {
@@ -58,8 +122,8 @@ export var objects = [{
     optionals: [],
     placeholder: '请选择',
     unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
     }
   },
   {
@@ -73,86 +137,8 @@ export var objects = [{
     defaultValue: 1,
     placeholder: '',
     unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
-    }
-  },
-  {
-    id: 'required',
-    span: 24,
-    label: 'required',
-    required: false,
-    disabled: false,
-    defaultValue: '',
-    onSearchFn: function(value) {
-      return [
-        {
-          value: 'guangzhou',
-          label: '广州'
-        },
-        {
-          value: 'shenzhen',
-          label: '深圳'
-        }
-      ]
-    },
-    placeholder: '请输入关键字',
-    unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
-    }
-  },
-  {
-    id: 'disabled',
-    span: 24,
-    label: 'disabled',
-    required: false,
-    disabled: false,
-    defaultValue: '',
-    onSearchFn: (value) => {
-      return [
-        {
-          value: 'guangzhou',
-          label: '广州'
-        },
-        {
-          value: 'shenzhen',
-          label: '深圳'
-        }
-      ]
-    },
-    placeholder: '请输入关键字',
-    unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
-    }
-  },
-  {
-    id: 'defaultValue',
-    span: 24,
-    label: 'defaultValue',
-    required: false,
-    disabled: false,
-    defaultValue: '',
-    optionals: [],
-    placeholder: "Don't input me",
-    unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
-    }
-  },
-  {
-    id: 'optionals',
-    span: 24,
-    label: 'optionals',
-    required: false,
-    disabled: false,
-    defaultValue: '',
-    optionals: [],
-    placeholder: "Don't input me",
-    unitType: 'textareaUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
     }
   },
   {
@@ -170,52 +156,55 @@ export var objects = [{
     ],
     placeholder: '请不要选我',
     unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
     }
   },
+  // {
+  //   id: 'onChange',
+  //   span: 24,
+  //   label: 'onChange',
+  //   required: false,
+  //   disabled: false,
+  //   defaultValue: '',
+  //   optionals: [
+  //     { value: 'sQ2Qu3', label: '未签收' },
+  //     { value: 'sQ2Qw3', label: '已签收' },
+  //     { value: 'sQ2Qy3', label: '正常签收' },
+  //     { value: 'sQ2Q_4', label: '异常签收' }
+  //   ],
+  //   placeholder: '请不要选我',
+  //   unitType: 'inputUnit',
+  //   onChange: function (object, objectValue) {
+  //     // console.log(object, objectValue)
+  //   }
+  // },
   {
-    id: 'unitType',
+    id: 'defaultValue',
     span: 24,
-    label: 'unitType',
+    label: 'defaultValue',
     required: false,
     disabled: false,
     defaultValue: '',
-    onSearchFn: (value) => {
-      return [
-        {
-          value: 'guangzhou',
-          label: '广州'
-        },
-        {
-          value: 'shenzhen',
-          label: '深圳'
-        }
-      ]
-    },
-    placeholder: '请输入关键字',
-    unitType: 'selectUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
-    }
-  },
-  {
-    id: 'onChange',
-    span: 24,
-    label: 'onChange',
-    required: false,
-    disabled: false,
-    defaultValue: '',
-    optionals: [
-      { value: 'sQ2Qu3', label: '未签收' },
-      { value: 'sQ2Qw3', label: '已签收' },
-      { value: 'sQ2Qy3', label: '正常签收' },
-      { value: 'sQ2Q_4', label: '异常签收' }
-    ],
-    placeholder: '请不要选我',
+    optionals: [],
+    placeholder: "Don't input me",
     unitType: 'inputUnit',
-    onChange: function(object, objectValue) {
-    // console.log(object, objectValue)
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
+    }
+  },
+  {
+    id: 'optionals',
+    span: 24,
+    label: 'optionals',
+    required: false,
+    disabled: false,
+    defaultValue: '',
+    optionals: [],
+    placeholder: "Don't input me",
+    unitType: 'textareaUnit',
+    onChange: function (object, objectValue) {
+      // console.log(object, objectValue)
     }
   }],
   unitType: 'boxUnit'

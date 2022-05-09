@@ -1,4 +1,4 @@
-export var objects = [
+export var neves = [
   {
     id: 'headerbox',
     span: 24,
@@ -18,7 +18,7 @@ export var objects = [
   },
   {
     id: 'leftbox',
-    span: 4,
+    span: 3,
     unitType: 'boxUnit',
     children: [
       {
@@ -35,11 +35,11 @@ export var objects = [
   },
   {
     id: 'midllebox',
-    span: 14,
+    span: 16,
     unitType: 'boxUnit',
     children: [
       {
-        id: 'rightCounent',
+        id: 'midlleUnit',
         span: 24,
         label: 'header',
         placeholder: '',
@@ -52,7 +52,7 @@ export var objects = [
   },
   {
     id: 'rightbox',
-    span: 6,
+    span: 5,
     unitType: 'boxUnit',
     children: [
       {

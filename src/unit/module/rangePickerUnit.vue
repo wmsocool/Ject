@@ -28,6 +28,10 @@ export default {
   created() {
     if (!this.objectValue[this.object.id]) {
       this.objectValue[this.object.id] = ''
+    } else if (typeof (this.objectValue[this.object.id]) === 'array') {
+      this.objectValue[this.object.id]
+    } else {
+      this.objectValue[this.object.id] = ''
     }
   },
   mounted() {},

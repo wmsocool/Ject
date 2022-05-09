@@ -1,5 +1,11 @@
 <template>
-  <LoadUnit :objects="objects" :object-value="objectValue" :units="units" />
+  <LoadUnit
+    v-if="optionValue"
+    :objects="objects"
+    :object-value="optionValue"
+    :units="units"
+    style="background:#ddd;"
+  />
 </template>
 
 <script>
@@ -12,16 +18,18 @@ export default {
   },
   data() {
     return {
-      objects
+      objects: objects,
+      optionValue: null
     }
   },
   computed: {},
   watch: {
     'objectValue.rightbox'(id) {
-      this.getObjectValue(id)
+      // this.getObjectValue(id)
+      this.getOptionValue(id)
     }
-    // '$root.Bus.theUnit.id'(id) {
-    //   this.getObjectValue(id)
+    // optionValue() {
+    //   return this.objectValue.objects.map(item => item.id === this.objectValue.rightbox)
     // }
   },
   created() {
@@ -30,19 +38,24 @@ export default {
   },
   destroyed() {},
   methods: {
-    getObjectValue(id) {
-      // this.objectValue = {}
-      var node = this.$root.Bus.theUnit
-      for (const key in node) {
-        var value = node[key]
-        if (typeof value !== 'string') {
-          value = JSON.stringify(node[key])
-        }
-        this.$set(this.objectValue, key, value)
-      }
+    // getObjectValue(id) {
+    //   var node = this.$root.Bus.theUnit
+    //   for (const key in node) {
+    //     var value = node[key]
+    //     if (typeof value !== 'string') {
+    //       value = JSON.stringify(node[key])
+    //     }
+    //     this.$set(this.objectValue, key, value)
+    //   }
+    // },
+    getOptionValue(id) {
+      this.optionValue = this.units[id]
+      // this.objectValue.objects.map(item => {
+      //   if (item.id === this.objectValue.rightbox) {
+      //     this.optionValue = item
+      //   }
+      // })
     }
   }
 }
 </script>
-
-<style></style>

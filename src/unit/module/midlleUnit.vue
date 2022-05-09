@@ -1,5 +1,5 @@
 <template>
-  <LoadUnit :objects="objects" :object-value="objectValue" :units="units" />
+  <LoadUnit v-if="objectValue.objects" :objects="objectValue.objects" :object-value="objectValue" :units="units" />
 </template>
 
 <script>
@@ -11,7 +11,6 @@ export default {
   },
   data() {
     return {
-      objects: this.$root.Bus.objects
     }
   },
   computed: {},

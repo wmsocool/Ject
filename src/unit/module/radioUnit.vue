@@ -26,7 +26,11 @@ export default {
   watch: {},
   created() {
     if (!this.objectValue[this.object.id]) {
-      this.objectValue[this.object.id] = ''
+      this.objectValue[this.object.id] = false
+    } else if (typeof (this.objectValue[this.object.id]) === 'boolean') {
+      this.objectValue[this.object.id]
+    } else {
+      this.objectValue[this.object.id] = false
     }
   },
   mounted() {},
