@@ -12,5 +12,6 @@ export const units = {
   headerUnit: { file: 'headerUnit' },
   leftUnit: { file: 'leftUnit' },
   rightUnit: { file: 'rightUnit' },
+  midlleUnit: { file: 'midlleUnit' },
   checkboxUnit: { file: 'checkboxUnit' }
 }

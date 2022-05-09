@@ -12,6 +12,9 @@ export default {
       objectValue: {}
     }
   },
+  mounted() {
+    this.$root.Bus.objects = objects
+  },
   methods: {
   }
 }

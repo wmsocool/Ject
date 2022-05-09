@@ -11,7 +11,7 @@ export var objects = [
         placeholder: '',
         unitType: 'headerUnit',
         onLoad: function (object, objectValue) {
-          this.$router.push('/ject/list')
+
         }
       }
     ]
@@ -28,14 +28,31 @@ export var objects = [
         placeholder: '',
         unitType: 'leftUnit',
         onLoad: function (object, objectValue) {
-          this.$router.push('/ject/list')
+
+        }
+      }
+    ]
+  },
+  {
+    id: 'midllebox',
+    span: 14,
+    unitType: 'boxUnit',
+    children: [
+      {
+        id: 'rightCounent',
+        span: 24,
+        label: 'header',
+        placeholder: '',
+        unitType: 'midlleUnit',
+        onLoad: function (object, objectValue) {
+
         }
       }
     ]
   },
   {
     id: 'rightbox',
-    span: 20,
+    span: 6,
     unitType: 'boxUnit',
     children: [
       {
@@ -45,7 +62,7 @@ export var objects = [
         placeholder: '',
         unitType: 'rightUnit',
         onLoad: function (object, objectValue) {
-          this.$router.push('/ject/list')
+
         }
       }
     ]
