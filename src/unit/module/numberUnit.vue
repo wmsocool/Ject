@@ -26,7 +26,11 @@ export default {
   watch: {},
   created() {
     if (!this.objectValue[this.object.id]) {
-      this.objectValue[this.object.id] = 0
+      this.objectValue[this.object.id] = this.object.defaultValue || 0
+    } else if (typeof (this.objectValue[this.object.id]) === 'number') {
+      this.objectValue[this.object.id]
+    } else {
+      this.objectValue[this.object.id] = this.object.defaultValue || 0
     }
   },
   mounted() {},

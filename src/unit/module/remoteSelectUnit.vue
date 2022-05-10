@@ -4,7 +4,13 @@
       v-model="objectValue[object.id]"
       multiple
       placeholder="请选择"
+      filterable
+      remote
+      reserve-keyword
+      :remote-method="objectValue.onSearchFn||onSearchFn"
+      :loading="loading"
     >
+      >
       <el-option
         v-for="item in object.optionals"
         :key="item.value"
@@ -25,23 +31,26 @@ export default {
   },
   data() {
     return {
-      tableData: Array(20).fill({
-        date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      })
     }
   },
   computed: {},
   watch: {},
   created() {
     if (!this.objectValue[this.object.id]) {
-      this.objectValue[this.object.id] = ''
+      this.objectValue[this.object.id] = this.object.defaultValue || ''
+    } else if (typeof (this.objectValue[this.object.id]) === 'string' || typeof (this.objectValue[this.object.id]) === 'array') {
+      this.objectValue[this.object.id]
+    } else {
+      this.objectValue[this.object.id] = this.object.defaultValue || ''
     }
   },
   mounted() {},
   destroyed() {},
-  methods: {}
+  methods: {
+    onSearchFn() {
+
+    }
+  }
 }
 </script>
 

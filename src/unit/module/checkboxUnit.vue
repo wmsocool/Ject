@@ -20,6 +20,13 @@ export default {
   computed: {},
   watch: {},
   created() {
+    if (!this.objectValue[this.object.id]) {
+      this.objectValue[this.object.id] = this.object.defaultValue || ''
+    } else if (typeof (this.objectValue[this.object.id]) === 'string' || typeof (this.objectValue[this.object.id]) === 'number') {
+      this.objectValue[this.object.id]
+    } else {
+      this.objectValue[this.object.id] = this.object.defaultValue || ''
+    }
   },
   mounted() {},
   destroyed() {},
