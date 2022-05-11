@@ -1,5 +1,10 @@
 <template>
-  <LoadUnit v-if="objectValue.objects" :objects="objectValue.objects" :object-value="objectValue" :units="units" />
+  <LoadUnit
+    v-if="objectValue.objects.length&&objectValue.middleValue"
+    :objects="objectValue.objects"
+    :object-value="objectValue.middleValue"
+    :units="units"
+  />
 </template>
 
 <script>
@@ -17,6 +22,11 @@ export default {
   watch: {
   },
   created() {
+    if (this.objectValue && this.objectValue.middleValue) {
+      this.objectValue.middleValue
+    } else {
+      this.objectValue.middleValue = {}
+    }
   },
   mounted() {
   },

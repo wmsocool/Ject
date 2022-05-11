@@ -39,7 +39,6 @@ export default {
   destroyed() {},
   methods: {
     handleNodeClick(node) {
-      this.$root.Bus.theUnit = node
       this.objectValue.rightbox = node.id
     },
     append(data) {

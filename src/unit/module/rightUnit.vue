@@ -25,12 +25,8 @@ export default {
   computed: {},
   watch: {
     'objectValue.rightbox'(id) {
-      // this.getObjectValue(id)
       this.getOptionValue(id)
     }
-    // optionValue() {
-    //   return this.objectValue.objects.map(item => item.id === this.objectValue.rightbox)
-    // }
   },
   created() {
   },
@@ -38,23 +34,8 @@ export default {
   },
   destroyed() {},
   methods: {
-    // getObjectValue(id) {
-    //   var node = this.$root.Bus.theUnit
-    //   for (const key in node) {
-    //     var value = node[key]
-    //     if (typeof value !== 'string') {
-    //       value = JSON.stringify(node[key])
-    //     }
-    //     this.$set(this.objectValue, key, value)
-    //   }
-    // },
     getOptionValue(id) {
       this.optionValue = this.units[id]
-      // this.objectValue.objects.map(item => {
-      //   if (item.id === this.objectValue.rightbox) {
-      //     this.optionValue = item
-      //   }
-      // })
     }
   }
 }
